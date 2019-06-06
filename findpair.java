@@ -5,7 +5,9 @@ class FindPair
     public static void findPair(int[] A, int sum)
     {
         int n = A.length;
-        Arrays.sort(A);
+        Arrays.sort(A); // sort 
+        
+        // remove the duplicate clements
         if (n>1) {
             int[] B = new int[n];
             int jk = 0;
@@ -18,7 +20,8 @@ class FindPair
             for (int i = 0; i < jk; i++) {
                 B[i] = B[i];
             }
-
+            
+            // find pair numbers
             int flag = 0;
             for (int i = 0; i < B.length - 1; i++) {
                 for (int j = i + 1; j < B.length - 1; j++) { 
